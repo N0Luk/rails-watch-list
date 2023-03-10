@@ -1,6 +1,8 @@
 class Bookmark < ApplicationRecord
   belongs_to :movie
   belongs_to :list
+  has_one_attached :image
+
 
   validates :comment, length: { minimum: 6 }
   # validates :movie, presence: true
